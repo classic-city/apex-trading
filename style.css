@@ -11,12 +11,13 @@ Requires PHP: 7.4
 Text Domain: ccc-primary-theme
 */
 :root {
-  --border-width:3px;
+  --border-width:2px;
   --border-style:solid;
-  --border-radius:5px;
-  --body-font:Helvetica,sans-serif;
-  --header-font:Unbounded,serif;
+  --border-radius:2px;
+  --body-font:"Poppins",Helvetica,sans-serif;
+  --header-font:"Poppins",Helvetica,sans-serif;
   --element-gap: var(--wp--preset--spacing--40);
+  --default-shadow: 3px 3px 2px rgba(0,0,0,.1);
 }
 
 .wp-site-blocks > header {
@@ -34,13 +35,43 @@ main {
 
 .wp-block-button .wp-block-button__link {
   border-radius: var(--border-radius);
+  box-shadow: var(--default-shadow);
   display: block;
   padding: 0.6em 1em;
+  transition: all 0.2s ease;
+}
+.wp-block-button .wp-block-button__link:hover {
+  box-shadow: none;
+  transform: scale(1.1);
 }
 
 body {
   font-family: var(--body-font);
   line-height: 1.2;
+}
+
+p, li {
+  line-height: 1.5;
+}
+
+li {
+  padding-bottom: 0.5em;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 300;
 }
 
 h1 {
@@ -68,19 +99,50 @@ h6 {
 }
 
 .has-primary-background-color.has-background {
-  color: var(--wp--preset--color--light);
+  color: var(--wp--preset--color--dark);
+}
+.has-primary-background-color.has-background a:where(:not(.wp-element-button)) {
+  color: var(--wp--preset--color--dark);
+  text-decoration-color: var(--wp--preset--color--secondary);
 }
 
 .has-secondary-background-color.has-background {
-  color: var(--wp--preset--color--dark);
+  color: var(--wp--preset--color--light);
+}
+.has-secondary-background-color.has-background a:where(:not(.wp-element-button)) {
+  color: var(--wp--preset--color--light);
+  text-decoration-color: var(--wp--preset--color--primary);
 }
 
 .has-tertiary-background-color.has-background {
   color: var(--wp--preset--color--light);
 }
+.has-tertiary-background-color.has-background a:where(:not(.wp-element-button)) {
+  color: var(--wp--preset--color--light);
+  text-decoration-color: var(--wp--preset--color--primary);
+}
 
 .has-dark-background-color.has-background {
   color: var(--wp--preset--color--light);
+}
+.has-dark-background-color.has-background a:where(:not(.wp-element-button)) {
+  color: var(--wp--preset--color--light);
+  text-decoration-color: var(--wp--preset--color--primary);
+}
+
+.has-light-background-color.has-background {
+  color: var(--wp--preset--color--dark);
+}
+.has-light-background-color.has-background a:where(:not(.wp-element-button)) {
+  color: var(--wp--preset--color--dark);
+  text-decoration-color: var(--wp--preset--color--primary);
+}
+
+a:where(:not(.wp-element-button)) {
+  color: var(--wp--preset--color--dark);
+  font-weight: bold;
+  text-decoration-color: var(--wp--preset--color--primary);
+  text-decoration-thickness: 3px;
 }
 
 .is-style-eyebrow {
@@ -89,6 +151,43 @@ h6 {
 }
 .is-style-eyebrow + h2, .is-style-eyebrow + h3, .is-style-eyebrow + h4, .is-style-eyebrow + h5, .is-style-eyebrow + h6 {
   margin-block-start: 0;
+}
+
+.is-style-background-half-gradient.has-background {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.is-style-background-half-gradient.has-background:before {
+  content: "";
+  inset: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+.is-style-background-half-gradient.has-background > * {
+  position: relative;
+  z-index: 1;
+}
+.is-style-background-half-gradient.has-background.has-primary-background-color:before {
+  background-image: linear-gradient(90deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--primary) 30%, transparent 100%);
+}
+.is-style-background-half-gradient.has-background.has-secondary-background-color:before {
+  background-image: linear-gradient(90deg, var(--wp--preset--color--secondary) 0%, var(--wp--preset--color--secondary) 30%, transparent 100%);
+}
+.is-style-background-half-gradient.has-background.has-tertiary-background-color:before {
+  background-image: linear-gradient(90deg, var(--wp--preset--color--tertiary) 0%, var(--wp--preset--color--tertiary) 30%, transparent 100%);
+}
+.is-style-background-half-gradient.has-background.has-light-background-color:before {
+  background-image: linear-gradient(90deg, var(--wp--preset--color--light) 0%, var(--wp--preset--color--light) 30%, transparent 100%);
+}
+.is-style-background-half-gradient.has-background.has-dark-background-color:before {
+  background-image: linear-gradient(90deg, var(--wp--preset--color--dark) 0%, var(--wp--preset--color--dark) 30%, transparent 100%);
 }
 
 @media screen and (max-width: 750px) {

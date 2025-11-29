@@ -18,6 +18,80 @@
     }
 }
 
+// Half gradient
+.is-style-background-half-gradient {
+    &.has-background {
+        background-color: transparent;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            content: "";
+            inset: 0;
+            left: 0;
+            position: absolute;
+            top: 0;
+            background: transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        $percent_to_start: 30%;
+
+        &.has-primary-background-color:before {
+            background-image: linear-gradient(
+                90deg,
+                var(--wp--preset--color--primary) 0%,
+                var(--wp--preset--color--primary) $percent_to_start,
+                transparent 100%
+            );
+        }
+
+        &.has-secondary-background-color:before {
+            background-image: linear-gradient(
+                90deg,
+                var(--wp--preset--color--secondary) 0%,
+                var(--wp--preset--color--secondary) $percent_to_start,
+                transparent 100%
+            );
+        }
+
+        &.has-tertiary-background-color:before {
+            background-image: linear-gradient(
+                90deg,
+                var(--wp--preset--color--tertiary) 0%,
+                var(--wp--preset--color--tertiary) $percent_to_start,
+                transparent 100%
+            );
+        }
+
+        &.has-light-background-color:before {
+            background-image: linear-gradient(
+                90deg,
+                var(--wp--preset--color--light) 0%,
+                var(--wp--preset--color--light) $percent_to_start,
+                transparent 100%
+            );
+        }
+
+        &.has-dark-background-color:before {
+            background-image: linear-gradient(
+                90deg,
+                var(--wp--preset--color--dark) 0%,
+                var(--wp--preset--color--dark) $percent_to_start,
+                transparent 100%
+            );
+        }
+    }
+}
+
 @media screen and (max-width: $mobile-viewport-size) {
     
     .wp-block-columns.is-style-swap-on-mobile {
