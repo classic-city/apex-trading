@@ -37,6 +37,11 @@
           "slug": "light",
           "name": "Light",
           "color": "#E3EBFF"
+        },
+        {
+          "slug": "light-alt",
+          "name": "Light Alt",
+          "color": "#FFFFFF"
         }
       ]
     },
