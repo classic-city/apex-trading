@@ -1,0 +1,208 @@
+/*
+Theme Name: CCC Primary Theme
+Theme URI: https://classiccity.com/
+Author: Classic City Consulting
+Author URI: https://classiccity.com/
+Description: Starter theme scaffolding for Classic City Consulting projects.
+Version: 0.1.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+Text Domain: ccc-primary-theme
+*/
+:root {
+  --border-width:3px;
+  --border-style:solid;
+  --border-radius:5px;
+  --body-font:Helvetica,sans-serif;
+  --header-font:Unbounded,serif;
+  --element-gap: var(--wp--preset--spacing--40);
+}
+
+.wp-site-blocks > header {
+  border-bottom: var(--border-width) var(--border-style);
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+main {
+  margin-top: 0;
+  margin-left: var(--wp--preset--spacing--50);
+  margin-right: var(--wp--preset--spacing--50);
+}
+
+.wp-block-button .wp-block-button__link {
+  border-radius: var(--border-radius);
+  display: block;
+  padding: 0.6em 1em;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 3.2777777778vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 2.5833333333vw, 2.75rem);
+}
+
+h3 {
+  font-size: clamp(1.75rem, 1.9444444444vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(1.35rem, 1.6611111111vw, 1.75rem);
+}
+
+h5 {
+  font-size: clamp(1.2rem, 1.4333333333vw, 1.5rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.2333333333vw, 1.3rem);
+}
+
+.has-primary-background-color.has-background {
+  color: var(--wp--preset--color--light);
+}
+
+.has-secondary-background-color.has-background {
+  color: var(--wp--preset--color--dark);
+}
+
+.has-tertiary-background-color.has-background {
+  color: var(--wp--preset--color--light);
+}
+
+.has-dark-background-color.has-background {
+  color: var(--wp--preset--color--light);
+}
+
+.is-style-eyebrow {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.is-style-eyebrow + h2, .is-style-eyebrow + h3, .is-style-eyebrow + h4, .is-style-eyebrow + h5, .is-style-eyebrow + h6 {
+  margin-block-start: 0;
+}
+
+@media screen and (max-width: 750px) {
+  .wp-block-columns.is-style-swap-on-mobile > .wp-block-column:first-child {
+    order: 2;
+  }
+  .wp-block-columns.is-style-swap-on-mobile > .wp-block-column:last-child {
+    order: 1;
+  }
+  .wp-block-group.is-layout-grid.is-style-mobile-scroll {
+    display: flex;
+    gap: var(--wp--style--block-gap, 1.5rem);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .wp-block-group.is-layout-grid.is-style-mobile-scroll > div {
+    flex: 0 0 75vw;
+    scroll-snap-align: start;
+  }
+  .wp-block-group.is-layout-grid.is-style-mobile-two-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .wp-block-group.is-layout-grid.is-style-mobile-one-column {
+    grid-template-columns: 1fr;
+  }
+}
+.ccc-cta {
+  padding: var(--wp--preset--spacing--70);
+}
+.ccc-image-column {
+  gap: var(--element-gap);
+}
+.ccc-image-column .wp-block-buttons {
+  margin-top: auto;
+}
+
+.ccc-icon-pod {
+  gap: var(--element-gap);
+}
+.ccc-icon-pod figure {
+  width: 4rem;
+}
+.ccc-icon-pod .wp-block-buttons {
+  margin-top: auto;
+}
+
+.ccc-hero--large-image {
+  padding: var(--wp--preset--spacing--70) 0;
+}
+.ccc-hero--two-column {
+  padding: var(--wp--preset--spacing--70) 0;
+}
+.ccc-hero--just-text {
+  padding: var(--wp--preset--spacing--70) 0;
+}
+
+.ccc-emphasis-text {
+  font-size: var(--wp--preset--font-size--extra-extra-large);
+  padding: var(--wp--preset--spacing--70) var(--wp--preset--spacing--30);
+}
+
+.wp-block-yoast-faq-block .schema-faq-section {
+  border-bottom: 1px solid var(--wp--preset--color--dark);
+  padding-block: var(--wp--preset--spacing--40);
+  transition: background-color 0.3s ease;
+}
+.wp-block-yoast-faq-block .schema-faq-section:last-child {
+  border-bottom: none;
+}
+.wp-block-yoast-faq-block .schema-faq-section.is-open .schema-faq-question::after {
+  transform: rotate(45deg);
+}
+.wp-block-yoast-faq-block .schema-faq-section.is-open .schema-faq-answer {
+  display: block;
+}
+.wp-block-yoast-faq-block .schema-faq-question {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--wp--preset--spacing--40);
+  margin: 0;
+  font-weight: 600;
+  position: relative;
+}
+.wp-block-yoast-faq-block .schema-faq-question::after {
+  content: "+";
+  display: inline-block;
+  font-weight: 400;
+  transform-origin: center;
+  transition: transform 0.2s ease-in-out;
+}
+.wp-block-yoast-faq-block .schema-faq-question:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 0.25rem;
+}
+.wp-block-yoast-faq-block .schema-faq-answer {
+  margin: 0;
+  padding-top: var(--wp--preset--spacing--40);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+.wp-block-yoast-faq-block .schema-faq-answer[hidden] {
+  display: none !important;
+}
+.wp-block-yoast-faq-block .schema-faq-section.is-open .schema-faq-answer {
+  opacity: 1;
+}
+
+.ccc-icon-list > p {
+  text-align: center;
+}
+.ccc-icon-list > p .wp-font-awesome-icon {
+  margin-right: var(--wp--preset--spacing--40);
+}/*# sourceMappingURL=style.css.map */

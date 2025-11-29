@@ -1,0 +1,9 @@
+// Base styles for the ccc-cta component.
+
+.#{ $ns }cta {
+    padding:var(--wp--preset--spacing--70);
+
+    &--full-width {
+        // TODO: define full-width variation.
+    }
+}

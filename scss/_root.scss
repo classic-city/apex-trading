@@ -1,0 +1,60 @@
+:root {
+
+    // Borders
+    --border-width:3px;
+    --border-style:solid;
+    --border-radius:5px;
+
+    // Fonts
+    --body-font:Helvetica,sans-serif;
+    --header-font:Unbounded,serif;
+
+    // Default Spacing
+    --element-gap: var(--wp--preset--spacing--40);
+
+    // Font sizes
+    //--wp--preset--font-size--extra-extra-large: create_clamp(1.75rem,2.5rem);
+}
+
+// Navigation bar
+.wp-site-blocks > header {
+    border-bottom:var(--border-width) var(--border-style);
+    position: fixed;
+    width:100%;
+    z-index: 9;
+}
+
+// Body spacing
+main {
+    margin-top: 0;
+    margin-left:var(--wp--preset--spacing--50);
+    margin-right: var(--wp--preset--spacing--50);
+}
+
+// Button sizing
+.wp-block-button {
+    .wp-block-button__link {
+        border-radius:var(--border-radius);
+        display: block;
+        padding:.6em 1em;
+    }
+}
+
+body {
+    font-family:var(--body-font);
+    line-height: 1.2;
+}
+
+// Header font size clamps
+h1 { @include create-clamp(2.5, 3.5); }
+h2 { @include create-clamp(2, 2.75); }
+h3 { @include create-clamp(1.75, 2); }
+h4 { @include create-clamp(1.35, 1.75); }
+h5 { @include create-clamp(1.2, 1.5); }
+h6 { @include create-clamp(1, 1.3); }
+
+// Default background/text color combinations
+.has-primary-background-color.has-background { color:var(--wp--preset--color--light); }
+.has-secondary-background-color.has-background { color:var(--wp--preset--color--dark); }
+.has-tertiary-background-color.has-background { color:var(--wp--preset--color--light); }
+.has-dark-background-color.has-background { color:var(--wp--preset--color--light); }

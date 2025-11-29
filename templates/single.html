@@ -1,0 +1,15 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"},"blockGap":"32px"}}} -->
+<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
+	<!-- wp:post-title {"level":1} /-->
+	<!-- wp:post-featured-image /-->
+	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+	<!-- wp:post-terms {"term":"category","prefix":"Filed under: "} /-->
+	<!-- wp:post-navigation-link {"type":"previous","showTitle":true} /-->
+	<!-- wp:post-navigation-link {"type":"next","showTitle":true} /-->
+	<!-- wp:comments-query-loop /-->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

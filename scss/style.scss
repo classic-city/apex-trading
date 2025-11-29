@@ -1,0 +1,31 @@
+/*
+Theme Name: CCC Primary Theme
+Theme URI: https://classiccity.com/
+Author: Classic City Consulting
+Author URI: https://classiccity.com/
+Description: Starter theme scaffolding for Classic City Consulting projects.
+Version: 0.1.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+Text Domain: ccc-primary-theme
+*/
+
+// Root SCSS entry point for CCC Primary Theme.
+// Use #{$ns} prefix for top-level selectors within partials.
+
+$ns: 'ccc-';
+$mobile-viewport-size: 750px;
+
+// Import component partials below.
+@import '_mixins';
+//@import '_sample-styles'; // Remove this before doing any client styles
+@import '_root';
+@import '_block-styles';
+@import '_cta';
+@import '_image-column';
+@import '_icon-pod';
+@import '_hero';
+@import '_emphasis-text';
+@import '_yoast-faq-block';
+@import '_icon-list';

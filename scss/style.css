@@ -1,0 +1,23 @@
+/*
+Theme Name: CCC Primary Theme
+Theme URI: https://classiccity.com/
+Author: Classic City Consulting
+Author URI: https://classiccity.com/
+Description: Starter theme scaffolding for Classic City Consulting projects.
+Version: 0.1.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+Text Domain: ccc-primary-theme
+*/
+.has-primary-background-color.has-background {
+  color: var(--wp--preset--color--light);
+}
+
+.has-secondary-background-color.has-background {
+  color: var(--wp--preset--color--dark);
+}
+
+.has-tertiart-background-color.has-background {
+  color: var(--wp--preset--color--light);
+}/*# sourceMappingURL=style.css.map */

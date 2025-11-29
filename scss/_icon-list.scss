@@ -1,0 +1,9 @@
+.#{$ns}icon-list {
+    > p {
+        text-align: center;
+
+        .wp-font-awesome-icon {
+            margin-right:var(--wp--preset--spacing--40);
+        }
+    }
+}

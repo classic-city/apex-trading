@@ -1,0 +1,52 @@
+// Block style modifiers.
+
+.wp-block-image.is-style-style-a {
+    // TODO: add Style A image modifiers.
+}
+
+.wp-block-image.is-style-style-b {
+    // TODO: add Style B image modifiers.
+}
+
+// Eyebrow styles
+.is-style-eyebrow {
+    font-weight: bold;
+    text-transform: uppercase;
+
+    + h2, + h3, + h4, + h5, + h6 {
+        margin-block-start: 0;
+    }
+}
+
+@media screen and (max-width: $mobile-viewport-size) {
+    
+    .wp-block-columns.is-style-swap-on-mobile {
+        > .wp-block-column:first-child {
+            order: 2;
+        }
+
+        > .wp-block-column:last-child {
+            order: 1;
+        }
+    }
+
+    .wp-block-group.is-layout-grid.is-style-mobile-scroll {
+        display: flex;
+        gap: var(--wp--style--block-gap, 1.5rem);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+
+        > div {
+            flex: 0 0 75vw;
+            scroll-snap-align: start;
+        }
+    }
+
+    .wp-block-group.is-layout-grid.is-style-mobile-two-column {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .wp-block-group.is-layout-grid.is-style-mobile-one-column {
+        grid-template-columns: 1fr;
+    }
+}
