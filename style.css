@@ -271,7 +271,15 @@ a:where(:not(.wp-element-button)) {
   padding: var(--element-gap);
 }
 .ccc-icon-pod figure {
-  width: 4rem;
+  height: 3rem;
+}
+.ccc-icon-pod figure img {
+  height: 100%;
+  width: auto;
+}
+.ccc-icon-pod .wp-block-font-awesome-icon svg {
+  height: 3rem;
+  width: auto;
 }
 .ccc-icon-pod .wp-block-buttons {
   margin-top: auto;

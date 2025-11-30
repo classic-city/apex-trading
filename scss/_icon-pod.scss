@@ -6,7 +6,19 @@
     padding:var(--element-gap);
 
     figure {
-        width:4rem;
+        height:3rem;
+
+        img {
+            height:100%;
+            width: auto;
+        }
+    }
+
+    .wp-block-font-awesome-icon {
+        svg {
+            height:3rem;
+            width: auto;
+        }
     }
 
     .wp-block-buttons {
