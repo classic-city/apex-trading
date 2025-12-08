@@ -3,6 +3,20 @@
     object-fit: cover;
 }
 
+.gb-block-post-grid header .gb-block-post-grid-title{
+    font-size: 26px;
+    color: #4f6281;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.gb-block-post-grid header .gb-block-post-grid-title a{
+    font-size: 26px;
+    color: #4f6281;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
 @media screen and (max-width:1000px) {
     .gb-post-grid-items{
         grid-template-columns: 1fr 1fr !important;

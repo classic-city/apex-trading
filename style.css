@@ -13,7 +13,7 @@ Text Domain: ccc-primary-theme
 :root {
   --border-width:2px;
   --border-style:solid;
-  --border-radius:4px;
+  --border-radius:6px;
   --body-font:"Poppins",Helvetica,sans-serif;
   --header-font:"Poppins",Helvetica,sans-serif;
   --element-gap: var(--wp--preset--spacing--40);
@@ -706,6 +706,20 @@ a:where(:not(.wp-element-button)) {
   object-fit: cover;
 }
 
+.gb-block-post-grid header .gb-block-post-grid-title {
+  font-size: 26px;
+  color: #4f6281;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.gb-block-post-grid header .gb-block-post-grid-title a {
+  font-size: 26px;
+  color: #4f6281;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
 @media screen and (max-width: 1000px) {
   .gb-post-grid-items {
     grid-template-columns: 1fr 1fr !important;
@@ -714,6 +728,78 @@ a:where(:not(.wp-element-button)) {
 @media screen and (max-width: 600px) {
   .gb-post-grid-items {
     grid-template-columns: 1fr !important;
+  }
+}
+.post-grid-custom .inner-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  padding: 25px;
+}
+.post-grid-custom .post-grid-item {
+  flex-basis: 31.25%;
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.post-grid-custom .post-grid-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.post-grid-custom .content-container {
+  padding: 24px 32px 20px 32px;
+}
+.post-grid-custom .post-grid-excerpt p {
+  line-height: 1.5;
+  color: #726f69;
+}
+.post-grid-custom img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.post-grid-custom a {
+  display: flex;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 26px;
+  color: #4f6281;
+}
+.post-grid-custom a:hover {
+  text-decoration: underline;
+}
+.post-grid-custom .post-grid-readmore {
+  width: fit-content;
+  line-height: 1;
+  font-size: 16px;
+  position: relative;
+  padding: 0;
+  padding-right: 30px;
+  text-decoration: none !important;
+  transition: 0.25s;
+  font-weight: 500;
+  color: #939eb8;
+}
+.post-grid-custom .post-grid-readmore .link__icon {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  transition: 0.25s;
+}
+.post-grid-custom .post-grid-readmore:hover .link__icon {
+  right: 0;
+  transition: 0.25s;
+}
+@media screen and (max-width: 768px) {
+  .post-grid-custom .inner-grid-container {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+  }
+  .post-grid-custom .post-grid-item {
+    flex-basis: 100%;
   }
 }
 
