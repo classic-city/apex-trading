@@ -20,6 +20,13 @@
     //--wp--preset--font-size--extra-extra-large: create_clamp(1.75rem,2.5rem);
 }
 
+@media screen and (max-width:1200px) {
+    main{
+        padding-left: var(--wp--preset--spacing--40);
+        padding-right: var(--wp--preset--spacing--40);
+    }
+}
+
 // Navigation bar
 .wp-site-blocks > header {
     border-bottom:var(--border-width) var(--border-style);
@@ -203,6 +210,8 @@ header.wp-block-template-part > .wp-block-group > .wp-block-group{
 
 .apex-footer-bottom-row .wp-block-genesis-blocks-gb-columns{
     width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
 }
 
 .apex-footer-images .gb-block-layout-column-inner{
@@ -217,6 +226,8 @@ header.wp-block-template-part > .wp-block-group > .wp-block-group{
 
 .apex-footer-logo-column .wp-block-image{
     max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 // Body spacing
@@ -350,15 +361,24 @@ a:where(:not(.wp-element-button)) {
 /* Hide submenu by default inside the responsive container (mobile overlay) */
 .wp-block-navigation__responsive-container .wp-block-navigation__submenu-container {
   display: none !important;
-  max-height: 0;
+  max-height: unset;
   overflow: hidden;
 }
 
 /* When the parent gets .is-menu-open, show it */
 .wp-block-navigation-submenu.is-menu-open > .wp-block-navigation__submenu-container {
   display: block !important;
-  max-height: 1000px; /* large enough to show content; no animation required */
+  max-height: unset; /* large enough to show content; no animation required */
   overflow: visible;
+}
+
+@media screen and (min-width:600px) {
+    .wp-block-navigation-item.has-child:hover > .wp-block-navigation__submenu-container {
+        display: block !important;
+        max-height: unset !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
 }
 
 /* Optional small touch-up: ensure toggle icon aligns on small screens */
@@ -392,10 +412,4 @@ a:where(:not(.wp-element-button)) {
 .wp-block-navigation__responsive-container-close{
     top: 15px;
     right: 15px;
-}
-
-.wp-block-navigation-item.has-child:hover > .wp-block-navigation__submenu-container {
-    display: block !important;
-    opacity: 1;
-    visibility: visible;
 }

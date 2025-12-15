@@ -48,9 +48,9 @@ function ccc_primary_register_post_grid_fields(): void
     }
 
     acf_add_local_field_group([
-        'key'                   => 'group_ccc_post_grid',
-        'title'                 => __('Post Grid', 'ccc-primary-theme'),
-        'fields'                => [
+        'key'    => 'group_ccc_post_grid',
+        'title'  => __('Post Grid', 'ccc-primary-theme'),
+        'fields' => [
             [
                 'key'           => 'field_ccc_pg_post_type',
                 'label'         => __('Post Type', 'ccc-primary-theme'),
@@ -59,7 +59,6 @@ function ccc_primary_register_post_grid_fields(): void
                 'choices'       => [
                     'post' => 'Post',
                     'page' => 'Page',
-                    // Add custom post types here
                 ],
                 'default_value' => 'post',
                 'ui'            => 1,
@@ -72,6 +71,17 @@ function ccc_primary_register_post_grid_fields(): void
                 'type'          => 'number',
                 'default_value' => 4,
                 'wrapper'       => ['width' => 50],
+            ],
+            [
+                'key'           => 'field_ccc_pg_select_posts',
+                'label'         => __('Select Posts', 'ccc-primary-theme'),
+                'name'          => 'select_posts',
+                'type'          => 'post_object',
+                'post_type'     => ['post', 'page'], // adjust as needed
+                'multiple'      => 1,
+                'return_format' => 'id',
+                'ui'            => 1,
+                'wrapper'       => ['width' => 100],
             ],
             [
                 'key'   => 'field_ccc_pg_show_title',
@@ -128,14 +138,9 @@ function ccc_primary_register_post_grid_fields(): void
 
 /**
  * Render callback for the Post Grid block.
- *
- * @param array  $block      Block settings and attributes.
- * @param string $content    Block inner HTML (not used).
- * @param bool   $is_preview Whether this is shown in the editor preview.
  */
 function ccc_primary_render_post_grid_block($block, $content = '', $is_preview = false)
 {
-    // Load render.php
     $block_dir = __DIR__;
     if (file_exists($block_dir . '/render.php')) {
         include $block_dir . '/render.php';

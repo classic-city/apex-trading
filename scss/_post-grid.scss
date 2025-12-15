@@ -5,7 +5,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: var(--wp--preset--spacing--50);
-        padding:  var(--wp--preset--spacing--50);
+        // padding:  var(--wp--preset--spacing--50);
     }
 
     .post-grid-item{
@@ -23,6 +23,7 @@
 
     .content-container{
         padding: 24px 32px 20px 32px;
+        padding: var(--wp--preset--spacing--40);
     }
 
     .post-grid-excerpt p{
@@ -81,7 +82,8 @@
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
-            padding: 25px;
+            padding-top: 25px;
+            padding-bottom: 25px;
             grid-template-columns: 1fr;
         }
 
