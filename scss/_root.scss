@@ -393,3 +393,9 @@ a:where(:not(.wp-element-button)) {
     top: 15px;
     right: 15px;
 }
+
+.wp-block-navigation-item.has-child:hover > .wp-block-navigation__submenu-container {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+}
