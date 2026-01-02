@@ -106,6 +106,8 @@ add_action('enqueue_block_editor_assets', 'ccc_primary_theme_enqueue_editor_asse
 require_once get_template_directory() . '/includes/block-styles/main.php';
 // Load testimonials customizations.
 require_once get_template_directory() . '/includes/testimonials/main.php';
+// Load seller sync and routing.
+require_once get_template_directory() . '/includes/sellers/main.php';
 
 
 
