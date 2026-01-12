@@ -437,3 +437,11 @@ a:where(:not(.wp-element-button)) {
 .ccc-hero--just-text {
   padding: var(--wp--preset--spacing--70) var(--wp--preset--spacing--40);
 }
+
+.has-text-align-center{
+  text-align: center;
+}
+
+.wp-block-image.size-thumbnail{
+    margin: 0;
+}

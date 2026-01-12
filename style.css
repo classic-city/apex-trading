@@ -428,6 +428,14 @@ a:where(:not(.wp-element-button)) {
   padding: var(--wp--preset--spacing--70) var(--wp--preset--spacing--40);
 }
 
+.has-text-align-center {
+  text-align: center;
+}
+
+.wp-block-image.size-thumbnail {
+  margin: 0;
+}
+
 .is-style-eyebrow {
   font-weight: bold;
   text-transform: uppercase;
