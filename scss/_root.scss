@@ -445,3 +445,22 @@ a:where(:not(.wp-element-button)) {
 .wp-block-image.size-thumbnail{
     margin: 0;
 }
+
+@media screen and (min-width:782px) {
+    .custom-absolute-image-desktop .wp-block-image.size-full{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.no-margin{
+    margin: 0 !important;
+}
+
+@media screen and (max-width:781px) {
+    .custom-padding-mobile{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
