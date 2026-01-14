@@ -505,6 +505,11 @@ main {
   font-size: 18px;
 }
 
+.wp-block-query-is-layout-flow {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .is-style-eyebrow {
   font-weight: bold;
   text-transform: uppercase;
