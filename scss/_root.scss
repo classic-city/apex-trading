@@ -522,3 +522,12 @@ main{
     padding-top: 80px;
     padding-bottom: 80px;
 }
+
+.event-location{
+    font-weight: bold;
+}
+
+.events-grid .post-grid-image img{
+    max-height: 200px;
+    object-fit: contain;
+}

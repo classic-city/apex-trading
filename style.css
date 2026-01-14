@@ -510,6 +510,15 @@ main {
   padding-bottom: 80px;
 }
 
+.event-location {
+  font-weight: bold;
+}
+
+.events-grid .post-grid-image img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
 .is-style-eyebrow {
   font-weight: bold;
   text-transform: uppercase;

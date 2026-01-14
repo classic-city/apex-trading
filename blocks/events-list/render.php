@@ -9,6 +9,7 @@ $events = get_field('events') ?: [];
                 $title = $event['title'] ?? '';
                 $start = $event['start_date'] ?? '';
                 $end   = $event['end_date'] ?? '';
+                $location = $event['location'] ?? ''; // 🔽 NEW
                 $desc  = $event['description'] ?? '';
                 $link_text = $event['link_text'] ?? '';
                 $url = $event['link'] ?? '';
@@ -38,6 +39,12 @@ $events = get_field('events') ?: [];
                                 ?>
                             </p>
                         <?php endif; ?>
+
+                        <?php if ($location): ?> <!-- 🔽 NEW OUTPUT -->
+                            <p class="event-location">
+                                <?php echo esc_html($location); ?>
+                            </p>
+                        <?php endif; ?> <!-- 🔼 NEW OUTPUT -->
 
                         <?php if ($desc): ?>
                             <p class="post-grid-excerpt event-description">

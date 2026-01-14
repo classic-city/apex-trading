@@ -75,6 +75,16 @@ function ccc_primary_register_events_fields(): void
                         'display_format' => 'F j, Y',
                         'return_format'  => 'Y-m-d',
                     ],
+
+                    // 🔽 NEW FIELD (location)
+                    [
+                        'key'   => 'field_ccc_event_location',
+                        'label' => __('Location', 'ccc-primary-theme'),
+                        'name'  => 'location',
+                        'type'  => 'text',
+                    ],
+                    // 🔼 NEW FIELD
+
                     [
                         'key'   => 'field_ccc_event_description',
                         'label' => __('Short Description', 'ccc-primary-theme'),
