@@ -117,6 +117,10 @@ $background-cut-off: 75%;
         pointer-events: none;
         width:$background-cut-off;
         z-index: 0;
+
+        @media screen and (max-width:1024px) {
+            width: 100% !important;
+        }
     }
 
     > * {
