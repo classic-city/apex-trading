@@ -473,6 +473,9 @@ a:where(:not(.wp-element-button)) {
 
 .background-size-contain {
   background-size: contain !important;
+  background-repeat: repeat;
+  background-size: auto !important;
+  background-position: top left;
 }
 
 footer.wp-block-template-part {
@@ -506,7 +509,7 @@ main {
 }
 
 .wp-block-query-is-layout-flow {
-  padding-top: 80px;
+  padding-top: 30px;
   padding-bottom: 80px;
 }
 
@@ -517,6 +520,48 @@ main {
 .events-grid .post-grid-image img {
   max-height: 200px;
   object-fit: contain;
+}
+
+/* Make each post card a vertical flex container */
+.wp-block-post-template .wp-block-post > .wp-block-group {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+/* Let the excerpt area grow */
+.wp-block-post-excerpt {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Push Read More to the bottom */
+.wp-block-post-excerpt__more-text {
+  margin-top: auto !important;
+}
+
+.wp-block-post-excerpt__excerpt {
+  margin-bottom: 1rem;
+}
+
+.post-grid-custom .post-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-grid-custom .content-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.post-grid-custom .post-grid-excerpt {
+  flex: 1;
+}
+
+.wp-block-post-template .wp-block-post {
+  padding-bottom: 0 !important;
 }
 
 .is-style-eyebrow {
@@ -974,6 +1019,7 @@ main {
 .post-grid-custom .post-grid-title {
   margin-top: 0;
   margin-bottom: 16px;
+  margin-bottom: 0;
 }
 .post-grid-custom .content-container {
   padding: 24px 32px 20px 32px;
